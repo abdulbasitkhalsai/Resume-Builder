@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+</head>
+<body>
+    <header class="header-container">
+        <div class="profile-info">
+            <div class="profile-pic">
+                <img src="./images/Profile-Pic.jpg" alt="Profile Picture">
+            </div>
+            <div class="personal-details">
+                <h1>Abdul Basit Khalsai</h1>
+                <div class="contact-info">
+                    <div class="email">Email: abdul@example.com</div>
+                    <div class="phone">Phone: +123456789</div>
+                </div>
+            </div>
+            <div class="qr-code-container">
+                <div class="qr-code">
+                    <img src="./images/linked-QR.png" alt="Profile QR Code">
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="personal-info">
+            <h2>Personal Information</h2>
+            <p>Location: Karachi, Pakistan</p>
+            <p>LinkedIn: <a href="#">linkedin.com/in/abdul-basit-khalsai</a></p>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <p>Bachelor of Science in Finance, University of XYZ</p>
+            <p>Graduated: 2021</p>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+              <li>TypeScript</li>
+              <li>HTML/CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <button id="toggle-skills">Toggle Skills</button>
+        </section>
+        
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <p>Job Title: Financial Analyst at ABC Corp</p>
+            <p>Duration: 2021-Present</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdul Basit Khalsai</p>
+        <p>Email: abdul@example.com | Phone: +123456789</p>
+    </footer>
+    <script src="main.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            var sticky = header.offsetTop;
+
+            if (window.pageYOffset > sticky) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>

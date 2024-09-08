@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png" href="./images/favicon.png">
+</head>
+<body>
+    <header class="header-container">
+        <div class="profile-info">
+            <div class="profile-pic">
+                <img src="./images/Profile-Pic.jpg" alt="Profile Picture">
+            </div>
+            <div class="personal-details">
+                <h1>Abdul Basit Khalsai</h1>
+                <div class="contact-info">
+                    <div class="email">Email: abdulbasitkhalsai@gmail.com</div>
+                    <div class="phone">Phone: +923333558252 </div>
+                </div>
+            </div>
+            <div class="qr-code-container">
+                <div class="qr-code">
+                    <img src="./images/linked-QR.png" alt="Profile QR Code">
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="personal-info">
+            <h2>Personal Information</h2>
+            <p>Location: Karachi, Pakistan</p>
+            <p>LinkedIn: <a href="#">linkedin.com/in/abdul-basit-khalsai</a></p>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <p>Diploma in Typescript, Governor Initiative of Artifical Intelligence & Cloud Computing</p>
+            <p>Completed: 2024</p>
+            <p>Bachelor of Commerce, University of Karachi</p>
+            <p>Graduated: 2021</p>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+              <li>TypeScript</li>
+              <li>HTML/CSS</li>
+              <li>JavaScript</li>
+              <li>Next JS</li>
+            </ul>
+            <button id="toggle-skills">Toggle Skills</button>
+        </section>
+        
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <p>Job Title: Deputy Manager Accounts at Ghazi Brothers - Pharmaceuticals</p>
+            <p>Duration: 2011-Present</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdul Basit Khalsai</p>
+        <p>Email: abdulbasitkhalsai@gmail.com | Phone: +923333558252</p>
+    </footer>
+    <script src="main.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            var sticky = header.offsetTop;
+
+            if (window.pageYOffset > sticky) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>
